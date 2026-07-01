@@ -14,7 +14,7 @@ export default function ShoesShop() {
     setSelectedItem(item);
   };
   return (
-    <div className="mx-auto max-w-screen-xl px-4 2xl:px-0 bg-gray-50 py-8 antialiased dark:bg-gray-900 md:py-12">
+    <div className="mx-auto max-w-screen-xl px-4 2xl:px-0 py-8 antialiased dark:bg-gray-900 md:py-12">
       <HeadingFilter />
       <FilterModal />
       <ProductList product={arrData} onQuickView={handleQuickView} />

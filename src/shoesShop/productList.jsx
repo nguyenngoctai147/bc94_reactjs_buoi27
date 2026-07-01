@@ -15,7 +15,7 @@ export default function ProductList(props) {
   };
 
   return (
-    <div className="mb-4 grid gap-4 sm:grid-cols-2 md:mb-8 lg:grid-cols-3">
+    <div className="mb-4 grid gap-6 sm:grid-cols-2 md:mb-8 lg:grid-cols-3">
       {renderProductItem()}
     </div>
   );

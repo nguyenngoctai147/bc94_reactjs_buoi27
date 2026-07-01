@@ -1,16 +1,21 @@
 export default function ProductItem(props) {
   const { itemData, handleQuickViewItem } = props;
   return (
-    <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+    <div className="rounded-lg bg-white hover:shadow-gray-300 p-6 shadow-xl hover:shadow-lg shadow-gray-100 dark:border-gray-700 dark:bg-gray-800 transition duration-700 ease-in-out">
       <div className="w-full aspect-square">
-        <a href="#">
+        <a
+          onClick={() => handleQuickViewItem(itemData)}
+          data-modal-target="quickView-modal"
+          data-modal-toggle="quickView-modal"
+          className="overflow-hidden"
+        >
           <img
-            className="mx-auto h-full object-cover dark:hidden"
+            className="mx-auto h-full object-cover dark:hidden transition duration-700 ease-in-out hover:scale-105"
             src={itemData.image}
             alt={itemData.shortDescription}
           />
           <img
-            className="mx-auto hidden h-full object-cover dark:block"
+            className="mx-auto hidden h-full object-cover dark:block transition duration-700 ease-in-out hover:scale-105"
             src={itemData.image}
             alt={itemData.shortDescription}
           />
