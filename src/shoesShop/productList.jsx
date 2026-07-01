@@ -1,12 +1,22 @@
-import React from "react";
 import ProductItem from "./productItem";
 
-export default function ProductList() {
+export default function ProductList(props) {
+  const { product, onQuickView } = props;
+
+  const renderProductItem = () => {
+    const productItemList = product.map((item) => (
+      <ProductItem
+        key={item.id}
+        itemData={item}
+        handleQuickViewItem={onQuickView}
+      />
+    ));
+    return productItemList;
+  };
+
   return (
-    <>
-      <ProductItem />
-      <ProductItem />
-      <ProductItem />
-    </>
+    <div className="mb-4 grid gap-4 sm:grid-cols-2 md:mb-8 lg:grid-cols-3">
+      {renderProductItem()}
+    </div>
   );
 }
